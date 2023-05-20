@@ -23,6 +23,6 @@ it('renders button correctly', () => {
   wrapper
     .first()
     .props()
-    .onPressIn()
+    .onPress()
   expect(spy).toBeCalled()
 })

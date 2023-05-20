@@ -22,7 +22,7 @@ export class Button extends React.Component<ButtonProps> {
     const { style, text, textStyle, onPress } = this.props
 
     return (
-      <TouchableOpacity style={[style]} onPressIn={onPress}>
+      <TouchableOpacity style={[style]} onPress={onPress}>
         <View style={styles.container}>
           <Text style={textStyle}>{text}</Text>
         </View>

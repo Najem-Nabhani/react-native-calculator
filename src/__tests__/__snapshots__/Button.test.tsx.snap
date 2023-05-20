@@ -3,7 +3,7 @@
 exports[`renders button correctly 1`] = `
 <TouchableOpacity
   activeOpacity={0.2}
-  onPressIn={[MockFunction]}
+  onPress={[MockFunction]}
   style={
     Array [
       undefined,
@@ -33,7 +33,7 @@ exports[`renders button correctly 1`] = `
 exports[`renders button correctly 2`] = `
 <TouchableOpacity
   activeOpacity={0.2}
-  onPressIn={[MockFunction]}
+  onPress={[MockFunction]}
   style={
     Array [
       Object {
