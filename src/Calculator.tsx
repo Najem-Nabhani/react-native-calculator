@@ -103,13 +103,11 @@ export class Calculator extends React.Component<CalculatorProps, State> {
     const containerHeight = height
 
     if (keyboardHeight) {
-      height = keyboardHeight / 5
+      height = keyboardHeight / 6
+    } else if (displayHeight || hideDisplay) {
+      height = ((height as number) - (displayHeight || 0)) / 6
     } else {
-      if (displayHeight || hideDisplay) {
-        height = ((height as number) - (displayHeight || 0)) / 5
-      } else {
-        height = (height as number) / 6
-      }
+      height = (height as number) / 7
     }
 
     if (!displayHeight) {
@@ -245,13 +243,18 @@ export class Calculator extends React.Component<CalculatorProps, State> {
                   this.renderNumberButton(btnSize, decimalSeparator as string)}
               </View>
             )}
+            <View style={Styles.row}>
+              {this.renderNumberButton(btnSize, '0.25', true)}
+              {this.renderNumberButton(btnSize, '0.50')}
+              {this.renderNumberButton(btnSize, '0.75')}
+            </View>
           </View>
           <Button
             style={[
               Styles.square,
               {
                 borderColor,
-                height: btnSize.height * 2,
+                height: btnSize.height * 3,
                 backgroundColor: done
                   ? acceptButtonBackgroundColor
                   : calcButtonBackgroundColor,
